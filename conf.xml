@@ -1,0 +1,6 @@
+<ElectionDB>
+	<databasename>"ElectionCEP"</databasename>
+	<databaseurl>"jdbc:mysql://localhost:3306/"</databaseurl>
+	<username>"root"</username>
+	<password>"root"</password>
+</ElectionDB>

@@ -1,0 +1,31 @@
+<% 
+
+    var Para = request.getContent();
+    var data = require('../config.json'); 
+    var db = new Database(data.pmtdb.databaseurl+data.pmtdb.databasename, data.pmtdb.username, data.pmtdb.password);
+    var result = db.query("SELECT CDate,"+Para["Top"]+","+Para["Second"]+","+Para["Choose"]+" FROM SentimentRate");
+    var data = [];
+    for (var i in result) {
+	
+	var myJson1 = {};
+	myJson1.Date = result[i].CDate;
+	myJson1.Candidate = Para["Top"];
+	myJson1.Rate = result[i][Para["Top"]];
+        data.push(myJson1);
+	
+	var myJson2 = {};
+	myJson2.Date = result[i].CDate;
+	myJson2.Candidate = Para["Second"];
+	myJson2.Rate = result[i][Para["Second"]];
+        data.push(myJson2);
+	
+	var myJson3 = {};
+	myJson3.Date = result[i].CDate;
+	myJson3.Candidate = Para["Choose"];
+	myJson3.Rate = result[i][Para["Choose"]];
+        data.push(myJson3);
+    }
+    db.close();
+	//log.info(data); 
+	print(stringify(data));  
+%>

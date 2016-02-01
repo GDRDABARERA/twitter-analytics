@@ -26,16 +26,6 @@
   src: url("../fonts/Roboto/Roboto-Light-webfont.eot");
   src: local("Roboto Light"), local("Roboto-Light-webfont"), url("../fonts/Roboto/Roboto-Light-webfont.eot") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto/Roboto-Light-webfont.svg#Roboto Light") format("svg");
 }
-/* ========================================================================
- * custom font weight
- * ======================================================================== */
-@font-face {
-  font-family: "Roboto Black";
-  font-style: "normal";
-  font-weight: 700;
-  src: url("../fonts/Roboto/Roboto-Light-webfont.eot");
-  src: local("Roboto Black"), local("Roboto-Black-webfont"), url("../fonts/Roboto/Roboto-Black-webfont.eot") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Black-webfont.woff") format("woff"), url("../fonts/Roboto/Roboto-Black-webfont.ttf") format("truetype"), url("../fonts/Roboto/Roboto-Black-webfont.svg#Roboto Light") format("svg");
-}
 
 /* ========================================================================
  * icon styles

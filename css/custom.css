@@ -4,20 +4,23 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ .node {
+        stroke:#000000;
+        stroke-width: 1.5px;
+    }
 
+  .link {
+        stroke: #7f8c8d;
+        stroke-opacity: .6;
+  }
 body {
-    font-family: 'Roboto Light';
     padding-top: 0px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     overflow-x: hidden;
     height: 100%;
 }
 .color1{ background:#f39c12; }
-.color2{ background:#8e44ad; }
-.color3{ background:#16a085; }
-
-.text-color1{color:#f39c12; }
-.text-color2{color:#8e44ad; }
-.text-color3{color:#16a085; }
+.color2{ background:#9b59b6; }
+.color3{ background:#1abc9c; }
 
 .loading{
     position: static;
@@ -25,25 +28,16 @@ body {
 .no-overflow{
     overflow: hidden;
 }
-h3{
-    padding: 10px 0px;
-    font-family: 'Roboto Black';
-}
-h3 .text-muted{
-    font-family: 'Roboto Light';
-}
 h3,a{
-    font-weight:normal;
+    font-weight:bold;
 }
 .page-header{
-    font-family: 'Roboto Black';
     margin-top: 20px;
     margin-bottom: 10px;
     border-bottom: none;
     padding: 0px;
 }
 .page-sub-header{
-
     font-size: 24px;
     font-weight: 400;
     margin-top: 0px;
@@ -102,7 +96,7 @@ footer a, footer a:hover,footer .icon{
 
 .card {
     margin: 0px;
-    /*min-height:363px;*/
+    min-height:363px;
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
@@ -259,59 +253,40 @@ footer a, footer a:hover,footer .icon{
     box-sizing: border-box;
 }
 .card.hovercard {
+    background: #f7f7f7;
     position: relative;
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    /*border:1px solid #e2e2e2;*/
-    background:#fff;
 }
 .card.hovercard .cardheader {
-    height: 170px;
+    height: 160px;
     background-size: cover;
     display: block;
 /*    filter: blur(15px);
     -webkit-filter: blur(15px);*/
 }
 .card.hovercard .avatar {
-    padding:10px;
-    /*position: relative;
+    position: relative;
     top: -150px;
-    margin-bottom: -140px;*/
+    margin-bottom: -140px;
 }
 .card.hovercard .avatar img {
-    float:left;
-    max-height: 150px;
+    max-height: 200px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,.4);
-}
-.card.hovercard .avatar img.img-party{
-    position:relative;
-    top:0px;
-    left:48px;
-    margin-left:-48px;
-    max-height: 48px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 0px;
-    background-color:rgba(255,255,255,.6);
+    border: 5px solid rgba(255,255,255,0.2);
 }
 .card.hovercard .info{
-    width:55%;
-    padding-left:2%;
-    float:left;
+    padding: 1em;
 }
 .card.hovercard .info .title {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 16px;
     font-size: 24px;
-    font-weight:bold;
     line-height: 1;
-    color: #fff;
-    text-align:left;
+    color: #262626;
+    vertical-align: middle;
 }
 
 .card.hovercard .info .desc {
@@ -323,10 +298,9 @@ footer a, footer a:hover,footer .icon{
     display: inline-block;
     padding: 0px 6px;
     margin-right: 3px;
-    background: #333;
+    background: #CFD8DC;
     margin-bottom: 5px;
     color: #333;
-    background-color:rgba(255,255,255,.4);
 }
 .card.hovercard .info .desc a{
     display: inline-block;
@@ -337,7 +311,7 @@ footer a, footer a:hover,footer .icon{
 .card.hovercard .info .desc span::before{
     content: "#";
     margin: 0px;
-    background-color:rgba(255,255,255,0);
+    background: #CFD8DC;
     color: #333;
     margin-right: 2px;
 }
@@ -482,21 +456,6 @@ footer a, footer a:hover,footer .icon{
     -webkit-transition: opacity .25s ease-in-out;
     float: left;
 }
-.pushy.pushy-open li img.img-party{
-    position:relative;
-    top:0px;
-    left:24px;
-    margin-left:-24px;
-    max-height: 24px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 2px solid #CFD8DC;
-    background-color:rgba(255,255,255,.6);
-}
-.pushy.pushy-open li:hover img.img-party{
-    border-color: #fff;
-}
 .pushy.pushy-open li:hover img{
     opacity:1;
 }
@@ -521,28 +480,24 @@ footer a, footer a:hover,footer .icon{
 .img-row-breaker{
     margin: 5em auto;
 }
-.row-breaker{
-    margin: 2em 30%;
-    border-bottom:1px solid #e2e2e2;
-}
 .repick-btn{
     float:right;
     display:block;
     font-size:16px;
     color:#16a085;
-    padding:14px 12px;
+    padding:9px 12px;
     -webkit-transition-property: background;
-    -moz-transition-property: background;
-    -o-transition-property: background;
-    transition-property: background;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-duration: .5s;
-    -webkit-transition-timing-function: linear;
-    -moz-transition-timing-function: linear;
-    -o-transition-timing-function: linear;
-    transition-timing-function: linear;
+        -moz-transition-property: background;
+        -o-transition-property: background;
+        transition-property: background;
+        -webkit-transition-duration: .5s;
+        -moz-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
 }
 .repick-btn:hover{
     cursor:pointer;
@@ -551,15 +506,4 @@ footer a, footer a:hover,footer .icon{
 }
 .repick-btn i{
     margin-right:6px;
-}
-
-.community-graph-legend{
-    text-align:right;
-    list-style:none;
-    padding:0px;
-    margin:10px 0px;
-}
-.community-graph-legend li{
-    display:inline;
-    margin-left:2em;
 }
